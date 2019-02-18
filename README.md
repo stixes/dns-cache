@@ -1,8 +1,6 @@
 # dns-cache
 
-
-[![Docker Automated build](https://img.shields.io/docker/automated/stixes/dns-cache.svg)](https://hub.docker.com/r/stixes/dns-cache/)
-[![Docker build status](https://img.shields.io/docker/build/stixes/dns-cache.svg)](https://hub.docker.com/r/stixes/dns-cache/)
+[![Size and Layers](https://images.microbadger.com/badges/image/stixes/dns-cache.svg)](https://hub.docker.com/r/stixes/dns-cache)
 [![Docker Pulls](https://img.shields.io/docker/pulls/stixes/dns-cache.svg)](https://hub.docker.com/r/stixes/dns-cache/)
 [![Docker stars](https://img.shields.io/docker/stars/stixes/dns-cache.svg)](https://hub.docker.com/r/stixes/dns-cache)
 
