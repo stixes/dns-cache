@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ ! -f /etc/dnsmasq.d/adblock.conf ]; then
+if [ ! -f /etc/hosts.dnsmasq ]; then
   echo "Downloading updated blocklist.."
   echo " - List url: ${BLOCKLIST_URL}"
-  curl -sSLf ${BLOCKLIST_URL} -o /etc/dnsmasq.d/adblock.conf
-  echo " - Entries: $(wc -l /etc/dnsmasq.d/adblock.conf)"
+  curl -sSLf ${BLOCKLIST_URL} -o /etc/hosts.dnsmasq
+  echo " - Entries: $(wc -l /etc/hosts.dnsmasq)"
   echo "Done."
 else
   echo "Reusing previously downloaded blocklist."
