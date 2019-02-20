@@ -20,6 +20,12 @@ This image is a very small footprint (Alpine based) dnsmasqd setup, with a cachi
 
 For caching it implements a rapid 3 sec. minimum TTL, which catches burst lookups (common in mobile apps) and caches the 1024 most recently used domains, along with caching of failed lookups (preventing re-lookup of failed requests), making common lookups VERY fast!
 
+I measured for my setup and compared to major 3rd party providers using [DNS Benchmark](https://www.grc.com/dns/benchmark.htm) tool:
+
+![benchmark results](dns-bench.jpg)
+
+Which shows this cache being unmatched in cached performance, and on par with the best alternatives.
+
 Lastly it will, on startup, fetch an AdBlocking hostname list and ensures that you dont make queries to adserving domains. The list is pulled from [StevenBlack's hosts files](https://github.com/StevenBlack/hosts) and dnsmasq uses the hosts file to return NULL (0.0.0.0) replies to clients. This is shown to have the [most reliable blocking](https://docs.pi-hole.net/ftldns/blockingmode/) rate, and avoids requests to any  servers all together. You can configure the `BLOCKLIST_URL` to point at any list in hosts format, such as any of the other lists provided in the link mentioned.
 
 You should start this image on you home lan server or NAS, and configure your Router's DHCP to roll out this new ip for dns and reap the benefits of faster browsing and living on the internet.
