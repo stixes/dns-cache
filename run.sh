@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ ! -f /etc/hosts.dnsmasq ]; then
-  echo "Downloading updated blocklist.."
+if [ ! -f /etc/dnsmasq.hosts.d/stevenblack.hosts ]; then
+  echo "Downloading updated blocklist from StevenBlack.."
   echo " - List url: ${BLOCKLIST_URL}"
-  curl -sSLf ${BLOCKLIST_URL} -o /etc/hosts.dnsmasq
-  echo " - Entries: $(wc -l /etc/hosts.dnsmasq)"
+  curl -sSLf ${BLOCKLIST_URL} -o /etc/dnsmasq.hosts.d/stevenblack.hosts
+  echo " - Entries: $(wc -l /etc/dnsmasq.hosts.d/stevenblack.hosts)"
   echo "Done."
 else
   echo "Reusing previously downloaded blocklist."
