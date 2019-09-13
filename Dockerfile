@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:latest
 MAINTAINER jesper.mathiassen@gmail.com
 
 ENV BLOCKLIST_URL=https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts
